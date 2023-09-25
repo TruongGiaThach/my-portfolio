@@ -12,7 +12,7 @@ function headerPortfolio() {
   container.style.marginBottom = marginBottomValue;
 
   const avatar = document.createElement('img')
-  avatar.src = './assets/me.png'
+  avatar.src = './assets/avatar.png'
   avatar.style.width = '200px'
   avatar.style.height = '200px'
 
@@ -22,7 +22,7 @@ function headerPortfolio() {
   content.innerHTML = `
     <p class="content__normal_text" style="margin-bottom: 6px;">
       <i class="ri-file-user-fill"></i>
-      Pham Xuan Bach
+      Truong Gia Thach
     </p>
   `
 
@@ -57,7 +57,7 @@ function reStyleCss(elm) {
       node.style.marginBottom = '24px';
       node.childNodes[1].style.fontSize = '22px';
       node.childNodes[1].style.marginBottom = marginBottomValue;
-      if (node.childNodes[3].childNodes[1].className.includes('content__normal_text')) {
+      if (node.childNodes[3].childNodes[1].className?.includes('content__normal_text')) {
         node.childNodes[3].childNodes[1].className = 'content__normal_text'
       } 
       
@@ -93,10 +93,10 @@ function reStyleCss(elm) {
       }
 
       // break page
-      if (node.childNodes[1].textContent.includes("Work") 
-      || node.childNodes[1].textContent.includes("Skills")) {
-        indexBreakArr.push(index)
-      }
+      // if (node.childNodes[1].textContent.includes("Work") 
+      // || node.childNodes[1].textContent.includes("Skills")) {
+      //   indexBreakArr.push(index)
+      // }
     }
   });
   const header = headerPortfolio();
@@ -112,7 +112,7 @@ function reStyleCss(elm) {
 function createPDF() {
   var opt = {
     margin: 0.5,
-    filename: "pxuanbach_cv.pdf",
+    filename: "giathach_cv.pdf",
     image: { type: "jpeg", quality: 0.98 },
     html2canvas: { scale: 2, scrollX: 0, scrollY: 0 },
     jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
