@@ -183,8 +183,8 @@ img {
 
 .content__normal_text {
     font-size: var(--normal-font-size);
-    line-height: calc(var(--normal-font-size)*1.5);
-    margin-bottom: var(--smaller-v-space);
+    line-height: calc(var(--normal-font-size));
+    margin-bottom: var(--smallest-v-space);
 }
 
 .break{

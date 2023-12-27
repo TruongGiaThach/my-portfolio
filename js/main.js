@@ -22,7 +22,7 @@ function headerPortfolio() {
   content.innerHTML = `
     <p class="content__normal_text" style="margin-bottom: 6px;">
       <i class="ri-file-user-fill"></i>
-      Truong Gia Thach
+      Truong Gia Thach - 0398903901 - giathach2012@gmail.com -  Ho Chi Minh City, Vietnam
     </p>
   `
 
@@ -34,7 +34,7 @@ function headerPortfolio() {
     }
   });
 
-  container.appendChild(avatar);
+  // container.appendChild(avatar);
   container.appendChild(content);
   return container;
 }
@@ -55,7 +55,7 @@ function reStyleCss(elm) {
 
       // style
       node.style.marginBottom = '24px';
-      node.childNodes[1].style.fontSize = '22px';
+      node.childNodes[1].style.fontSize = '16px';
       node.childNodes[1].style.marginBottom = marginBottomValue;
       if (node.childNodes[3].childNodes[1].className?.includes('content__normal_text')) {
         node.childNodes[3].childNodes[1].className = 'content__normal_text'
@@ -65,9 +65,9 @@ function reStyleCss(elm) {
         if (cNode.className === "content__section_body") {
           cNode.childNodes.forEach(n => {
             if (n.className === "title__space_between") {
-              n.childNodes[1].style.fontSize = '18px'
+              n.childNodes[1].style.fontSize = '16px'
               if (n.childNodes.length > 3) {
-                n.childNodes[3].style.fontSize = '18px'
+                n.childNodes[3].style.fontSize = '16px'
               }
             }
           })
